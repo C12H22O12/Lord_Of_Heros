@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# 로드오브히어로즈 비공식 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+영웅 정보 안내
 
-## Available Scripts
+## 목적
 
-In the project directory, you can run:
+- 리액트에 익숙해지기
+- flex box로 반응형 웹 구현
+- 개인 프로젝트
 
 ### `npm start`
 
