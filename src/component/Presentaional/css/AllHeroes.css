@@ -35,12 +35,33 @@
     width:50%;
 }
 
-#search, #searchBtn{
+#showHero>h1{
+    font-family: 'EliceDigitalBaeum_Bold';
+    margin-bottom:10%;
+}
+
+#showHero>p{
+    font-family: 'IBMPlexSansKR-Regular';
+}
+
+#showHero > div{
+    display: flex;
+    justify-content: center;
+    align-content : center;
+}
+
+#showHero > div > *{
+    font-family: 'IBMPlexSansKR-Regular';
+    text-align: center;
     margin: 0;
     font-size : 100%;
     border:none;
-    padding: 2%;
+    padding: 3%;
     height : 40px;
+}
+
+#search{
+    border-radius: 30px;
 }
 
 #heroList{
