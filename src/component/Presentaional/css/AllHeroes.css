@@ -6,6 +6,7 @@
     background-color: #000000;
     background-image: url(../../img/영웅단체.jpg);
     background-size: 100% auto;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -21,5 +22,29 @@
     color: white;
     background-color: black;
     display: inline-block;
-    width:45%;
+}
+
+#showHero{
+    padding:2%;
+    text-align: center;
+    width:25%;
+    border-right: white solid;
+}
+
+#showHero>img{
+    width:50%;
+}
+
+#search, #searchBtn{
+    margin: 0;
+    font-size : 100%;
+    border:none;
+    padding: 2%;
+    height : 40px;
+}
+
+#heroList{
+    text-align: left;
+    width:55%;
+    padding:2%;
 }
