@@ -7,6 +7,7 @@
 - 리액트에 익숙해지기
 - flex box로 반응형 웹 구현
 - 개인 프로젝트
+- Presentational & Container 디자인 패턴 적용
 
 ### `npm start`
 
