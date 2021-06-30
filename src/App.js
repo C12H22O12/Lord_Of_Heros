@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Heroes from './component/Main'
+import Heroes from './component/Presentaional/AllHeroes'
 
 function App() {
   return (
