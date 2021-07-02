@@ -11,7 +11,7 @@ function AllHeroes() {
                 </div>
                 <div id="heroInfo">
                     <p>용의 피에 부끄럽지 않은 영원한 충성을 바치겠어요.</p>
-                    <h1>라이레이</h1>
+                    <h1>라이레이 옌</h1>
                 </div>
             </div>
         </div>
