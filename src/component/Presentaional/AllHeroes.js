@@ -17,7 +17,6 @@ function AllHeroes() {
                     </div>
                 </div>
                 <div id="heroList">
-                    <h2>라이레이</h2>
                 </div>
             </div>
         </div>

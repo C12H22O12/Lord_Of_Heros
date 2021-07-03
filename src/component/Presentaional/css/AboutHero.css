@@ -58,5 +58,20 @@
 #heroInfo>p{
     font-size : 150%;
     margin:0;
-    font-family: 'IBMPlexSansKR-Regular';
+}
+
+#stat{
+    margin-block:20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#stat>table>thead, #stat>h2{
+    font-family: 'EliceDigitalBaeum_Bold';
+}
+
+table{
+    margin-right : 7rem;
+    padding-right : 3rem;
+    width:130%;
 }
