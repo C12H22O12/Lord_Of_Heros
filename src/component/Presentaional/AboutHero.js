@@ -1,11 +1,15 @@
 import React from "react";
 import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
+import LOGO from "../img/메인로고.png"
 import "./css/AboutHero.css"
 
 function AllHeroes() {
     return (
         <div id="BackgroundFrame">
+            <div id ="mainLogo">
+                <img src={LOGO}/>
+            </div>
             <div id="info">
                 <div id="heroImg">
                     <img src={Hero}/>
@@ -60,6 +64,9 @@ function AllHeroes() {
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div id="about">
+                <p id="backgroundStory">소수민족인 용인족의 지도자로, 페르사의 대족장을 보좌하는 참모 역할을 수행하고 있습니다. 정치적인 능력이 뛰어나고 꼼꼼해 실질적으로 페르사의 경영을 도맡고 있습니다. 평소에는 온화하고 침착한 성격이지만, 전투상황이 되면 용의 피가 깨어나며 광폭해지니 조심하시길, 대외적으로 "열풍의 공주"라고 불리나, 본인은 그 이명을 조금 부끄러워합니다.</p>
             </div>
         </div>
     );
