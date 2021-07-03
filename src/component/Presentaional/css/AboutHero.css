@@ -51,7 +51,7 @@
     width:auto;
     margin:0 0 0 0;
     padding-bottom: 2%;
-    border-bottom: white solid 1px;
+    border-bottom: white solid 2px;
     font-family: 'EliceDigitalBaeum_Bold';
 }
 
@@ -60,18 +60,28 @@
     margin:0;
 }
 
-#stat{
-    margin-block:20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#stat>table>thead, #stat>h2{
+#heroInfo>table>thead, #statSelect{
     font-family: 'EliceDigitalBaeum_Bold';
 }
 
-table{
-    margin-right : 7rem;
-    padding-right : 3rem;
-    width:130%;
+#statSelect>select{
+    padding : 10px;
+    width : 20%;
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-size : 15px;
+    margin-bottom:3%;
+    border-radius: 30px;
+}
+
+#heroInfo>table{
+    margin-top : 20px;
+    width:50%;
+    font-size:20px;
+}
+
+#JobImg{
+    position: inherit;
+    right : 2%;
+    top:12%;
+    z-index: 0;
 }
