@@ -82,6 +82,6 @@
 #JobImg{
     position: inherit;
     right : 2%;
-    top:12%;
+    bottom:2%;
     z-index: 0;
 }
