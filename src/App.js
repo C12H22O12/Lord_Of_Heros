@@ -1,5 +1,5 @@
 import './App.css';
-import Heroes from './component/Presentaional/AboutHero'
+import Heroes from './component/Presentaional/AllHeroes'
 
 function App() {
   return (

@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
 import LOGO from "../img/메인로고.png"
+import type from "../img/typeIcon/불속성.png"
 import skill1 from "../img/skillIcon/skill/용염무.png"
 import skill2 from "../img/skillIcon/skill/옥염선.png"
 import skill3 from "../img/skillIcon/skill/열풍천도.png"
@@ -27,11 +28,16 @@ function AllHeroes() {
                             <option value="2to60">2각 60</option>
                         </select>
                     </div>
-                    <p>"용의 피에 부끄럽지 않은 영원한 충성을 바치겠어요."</p>
-                    <h1>라이레이 옌</h1>
+                    <i>"용의 피에 부끄럽지 않은 영원한 충성을 바치겠어요."</i>
+                    <div id="name">
+                        <h1>라이레이 옌</h1>
+                        <img src={type} alt="type"/>
+                    </div>
                     <div id="JobImg">
                         <img src={Job} alt="aboutClass"/>
                     </div>
+                    <p>1,2차 계약</p>
+                    <p>★★★★★</p>
                     <table>
                         <thead>
                             <tr>
