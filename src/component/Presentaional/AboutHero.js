@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
 import LOGO from "../img/메인로고.png"
@@ -8,9 +8,13 @@ import skill2 from "../img/skillIcon/skill/옥염선.png"
 import skill3 from "../img/skillIcon/skill/열풍천도.png"
 import passive1 from "../img/skillIcon/passive/공격력 증가.png"
 import passive2 from "../img/skillIcon/passive/풀속에 피해량 증가.png"
+import hero_img from "../img/gif/라이레이 무각.gif"
+import skill2_gif from "../img/gif/라이레이 2스.gif"
 import "./css/AboutHero.css"
 
 function AllHeroes() {
+    const {isOpen, setIsOpen} = useState(false);
+
     return (
         <div id="BackgroundFrame">
             <div id="mainLogo">
@@ -84,6 +88,37 @@ function AllHeroes() {
                     광폭해지니 조심하시길, 대외적으로 "열풍의 공주"라고 불리나, 본인은 그 이명을 조금 부끄러워합니다.</p>
                 <div id="skill">
                     <h1>스킬</h1>
+                    <div class="aboutSkill">
+                        <img src={skill2_gif} alt="skill2"/>
+                        <table>
+                            <thead>
+                                <th>레벨</th>
+                                <th>내용</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lv.2</td>
+                                    <td>피해량 10%증가</td>
+                                </tr>
+                                <tr>
+                                    <td>Lv.3</td>
+                                    <td>약화 효과 발동 10%증가</td>
+                                </tr>
+                                <tr>
+                                    <td>Lv.4</td>
+                                    <td>피해량 10%증가</td>
+                                </tr>
+                                <tr>
+                                    <td>Lv.2</td>
+                                    <td>효과 지속 시간 1턴 증가</td>
+                                </tr>
+                                <tr>
+                                    <td>Lv.6</td>
+                                    <td>쿨타임 1턴 감소</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <ul>
                         <li>
                             <img src={skill1} alt="skill1"/>
@@ -119,6 +154,13 @@ function AllHeroes() {
                             <p>대지 속성에게 주는 피해량이 증가한다</p>
                         </li>
                     </ul>
+                </div>
+                <h1>인게임 대사</h1>
+                <div className="heroAct">
+                    <h2>영입 시</h2>
+                    <img src={hero_img} alt="meeting"/>
+                    <p>"용의 피에 부끄럽지 않은 영원한 충성을 바치겠어요."</p>
+                    <p>"라이레이 옌, 맹세합니다. 영원히 그대를 섬기겠어요."</p>
                 </div>
             </div>
         </div>

@@ -136,7 +136,8 @@
     width:100%;
 }
 
-#skill>h1{
+#skill>h1, .heroAct>h2, h1{
+    color: white;
     font-family: 'EliceDigitalBaeum_Bold';
 }
 
@@ -157,6 +158,10 @@ li{
     width:25%;
 }
 
+li:hover{
+    cursor: pointer;
+}
+
 li>img{
     width:100px;
 }
@@ -174,4 +179,33 @@ li{
 li>p{
     margin:2%;
     font-size: 20px;
+}
+
+.heroAct{
+    margin:0 auto;
+    color : white;
+}
+
+.heroAct>img{
+    width:60%;
+}
+
+.heroAct>p{
+    font-size:120%;
+    font-family: 'Eulyoo1945-SemiBold';
+}
+
+.aboutSkill>img{
+    width:80%;
+}
+
+.aboutSkill>table{
+    width: 80%;
+    margin:0 auto;
+    padding:10px;
+}
+
+.aboutSkill>table>tbody>tr>td, .aboutSkill>table>thead>th{
+    padding:10px;
+    font-size:120%;
 }
