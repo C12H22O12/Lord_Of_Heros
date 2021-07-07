@@ -18,6 +18,40 @@ function AllHeroes() {
     const [isOpen_2, setIsOpen_2] = useState(false);
     const [isOpen_3, setIsOpen_3] = useState(false);
 
+    const skill = [
+        [
+            "1스", "용염무", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+        ],
+        [
+            "2스", "옥염선", "버스트게이지 156 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+        ],
+        [
+            "3스", "열풍천도", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+        ],
+        [
+            "패시브", "용족의 위압감", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+        ],
+        [
+            "패시브", "무예의 달인", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+        ]
+    ]
+
+    const skillList = () => {
+        const skillRes = [];
+        for (let i = 0; i < skill.length; i++) {
+            skillRes.push(
+                <li>
+                    <img src={skill1} alt="skill1"/>
+                    <i>{skill[i][0]}</i>
+                    <h2>{skill[i][1]}</h2>
+                    <i>{skill[i][2]}</i>
+                    <p>{skill[i][3]}</p>
+                </li>
+            );
+        }
+        return skillRes;
+    }
+
     return (
         <div id="BackgroundFrame">
             <div id="mainLogo">
@@ -91,51 +125,14 @@ function AllHeroes() {
                     광폭해지니 조심하시길, 대외적으로 "열풍의 공주"라고 불리나, 본인은 그 이명을 조금 부끄러워합니다.</p>
                 <div id="skill">
                     <h1>스킬</h1>
+                    <p>각 스킬 별 상세 설명을 보고싶을 경우 스킬 아이콘을 클릭해보세요</p>
                     <ul>
-                        <li>
-                            <img src={skill1} alt="skill1"/>
-                            <i>1스</i>
-                            <h2>용염무</h2>
-                            <i>버스트게이지 108 획득</i>
-                            <p>선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다</p>
-                        </li>
-                        <li
-                            onClick={() => {
-                                setIsOpen_2(!isOpen_2)
-                            }}>
-                            <img src={skill2} alt="skill1"/>
-                            <i>2스</i>
-                            <h2>옥염선</h2>
-                            <i>버스트게이지 156 획득</i>
-                            <p>모든 적을 공격하고, 60% 확률로 1턴 간 대상의 [효과 저항]을 감소시킨다</p>
-                        </li>
-                        {isOpen_2?<AboutSkill1/>:null}
-                        <li onClick={() => {
-                                setIsOpen_3(!isOpen_3)
-                            }}>
-                            <img src={skill3} alt="skill1"/>
-                            <i>3스</i>
-                            <h2>열풍천도</h2>
-                            <i>4소울 소모</i>
-                            <p>모든 적을 공격하고, 80% 확률로 대상의 [행동 게이지]를 20% 감소시킨다</p>
-                        </li>
-                        {isOpen_3?<AboutSkill1/>:null}
-                        <li>
-                            <img src={passive1} alt="passive1"/>
-                            <i>패시브</i>
-                            <h2>용족의 위압감</h2>
-                            <p>공격력이 증가한다</p>
-                        </li>
-                        <li>
-                            <img src={passive2} alt="passive1"/>
-                            <i>패시브</i>
-                            <h2>무예의 달인</h2>
-                            <p>대지 속성에게 주는 피해량이 증가한다</p>
-                        </li>
+                        {skillList()}
                     </ul>
                 </div>
                 <h1>인게임 대사</h1>
                 <div className="heroAct">
+                    <img src={hero_img} alt="meeting"/>
                     <h2>영입 시</h2>
                     <img src={hero_img} alt="meeting"/>
                     <p>"용의 피에 부끄럽지 않은 영원한 충성을 바치겠어요."</p>
