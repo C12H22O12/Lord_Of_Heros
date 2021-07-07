@@ -17,16 +17,17 @@ import AboutSkill1 from "./AboutSkill.js"
 function AllHeroes() {
     const [isOpen_2, setIsOpen_2] = useState(false);
     const [isOpen_3, setIsOpen_3] = useState(false);
+    const [status, setStatus] = useState("2각 60");
 
     const skill = [
         [
-            "1스", "용염무", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+            "1스", "용염무", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
         ],
         [
-            "2스", "옥염선", "버스트게이지 156 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+            "2스", "옥염선", "버스트게이지 156 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
         ],
         [
-            "3스", "열풍천도", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
+            "3스", "열풍천도", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
         ],
         [
             "패시브", "용족의 위압감", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
@@ -36,18 +37,39 @@ function AllHeroes() {
         ]
     ]
 
+    const handleChange = (e) =>{
+        let value = e.target.value;
+        setStatus(value);
+        console.log(status);
+    } 
+
     const skillList = () => {
         const skillRes = [];
         for (let i = 0; i < skill.length; i++) {
-            skillRes.push(
-                <li>
-                    <img src={skill1} alt="skill1"/>
-                    <i>{skill[i][0]}</i>
-                    <h2>{skill[i][1]}</h2>
-                    <i>{skill[i][2]}</i>
-                    <p>{skill[i][3]}</p>
-                </li>
-            );
+            if(i<2){
+                skillRes.push(
+                    <li onClick={()=>{
+                        setIsOpen_2(!isOpen_2);
+                    }}>
+                        <img src={skill1} alt="skill1"/>
+                        <i>{skill[i][0]}</i>
+                        <h2>{skill[i][1]}</h2>
+                        <i>{skill[i][2]}</i>
+                        <p>{skill[i][3]}</p>
+                    </li>
+                );
+            }
+            else{
+                skillRes.push(
+                    <li>
+                        <img src={skill1} alt="skill1"/>
+                        <i>{skill[i][0]}</i>
+                        <h2>{skill[i][1]}</h2>
+                        <i>{skill[i][2]}</i>
+                        <p>{skill[i][3]}</p>
+                    </li>
+                );
+            }
         }
         return skillRes;
     }
@@ -63,7 +85,8 @@ function AllHeroes() {
                 </div>
                 <div id="heroInfo">
                     <div id="statSelect">
-                        <select name="statSelect">
+                        <select name="statSelect"
+                        onChange={(e)=>handleChange(e)}>
                             <option value="0to60">무각 60</option>
                             <option value="1to60">1각 60</option>
                             <option value="2to60">2각 60</option>
