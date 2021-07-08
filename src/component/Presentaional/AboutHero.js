@@ -18,8 +18,16 @@ import AboutStat from "./AboutStat.js"
 function AllHeroes() {
     const [isOpen_2, setIsOpen_2] = useState(false);
     const [isOpen_3, setIsOpen_3] = useState(false);
-    const [status, setStatus] = useState("2각 60");
-    const [statInfo, setStatInfo] = useState([]);
+    const [statInfo, setStatInfo] = useState(
+        [
+            10401,
+            1114,
+            1049,
+            "20%",
+            "30%",
+            "35%",
+            "25%"
+        ]);
 
     const skill = [
         [
@@ -69,11 +77,6 @@ function AllHeroes() {
         ]
     ];
 
-    const handleChange = (e) => {
-        let value = e.target.value;
-        setStatus(value);
-    }
-
     const skillList = () => {
         const skillRes = [];
         for (let i = 0; i < skill.length; i++) {
@@ -105,19 +108,23 @@ function AllHeroes() {
         return skillRes;
     }
 
-    async function setStat() {
-        console.log('calling');
-        if (stat === "무각 60") {
-            await setStatInfo(stat[0]);
-            console.log(statInfo);
-        } else if (stat === "1각 60") {
-            await setStatInfo(stat[1]);
-            console.log(statInfo);
-        } else {
-            await setStatInfo(stat[2]);
-            console.log(statInfo);
+    function handleChange(e) {
+        let value = 0;
+
+        if (e.target.value === "0to60"){
+            value=0;
+        } else if (e.target.value === "1to60"){
+            value=1;
+        } else{
+            value=2;
         }
-    }
+
+        stat.forEach(async (att) => {
+          if(att === stat[value]){
+            await setStatInfo(att)
+          }
+        })
+      }
 
     return (
         <div id="BackgroundFrame">
@@ -134,7 +141,6 @@ function AllHeroes() {
                             name="statSelect"
                             onChange={(e) => {
                                 handleChange(e);
-                                setStat();
                             }}>
                             <option value="0to60">무각 60</option>
                             <option value="1to60">1각 60</option>
@@ -151,7 +157,9 @@ function AllHeroes() {
                     </div>
                     <p>1,2차 계약</p>
                     <p>★★★★★</p>
-                    <AboutStat/>
+                    <AboutStat
+                        stat={statInfo}
+                    />
                 </div>
             </div>
             <div id="about">
