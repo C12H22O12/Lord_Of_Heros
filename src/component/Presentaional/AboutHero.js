@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
@@ -13,11 +13,13 @@ import hero_img from "../img/gif/라이레이 무각.gif"
 
 import "./css/AboutHero.css"
 import AboutSkill1 from "./AboutSkill.js"
+import AboutStat from "./AboutStat.js"
 
 function AllHeroes() {
     const [isOpen_2, setIsOpen_2] = useState(false);
     const [isOpen_3, setIsOpen_3] = useState(false);
     const [status, setStatus] = useState("2각 60");
+    const [statInfo, setStatInfo] = useState([]);
 
     const skill = [
         [
@@ -37,20 +39,50 @@ function AllHeroes() {
         ]
     ]
 
-    const handleChange = (e) =>{
+    const stat = [
+        [
+            11421,
+            1059,
+            782,
+            "10%",
+            "50%",
+            "10%",
+            "25%"
+        ],
+        [
+            11992,
+            1112,
+            821,
+            "15%",
+            "55%",
+            "20%",
+            "30%"
+        ],
+        [
+            10401,
+            1114,
+            1049,
+            "20%",
+            "30%",
+            "35%",
+            "25%"
+        ]
+    ];
+
+    const handleChange = (e) => {
         let value = e.target.value;
         setStatus(value);
-        console.log(status);
-    } 
+    }
 
     const skillList = () => {
         const skillRes = [];
         for (let i = 0; i < skill.length; i++) {
-            if(i<2){
+            if (i < 2) {
                 skillRes.push(
-                    <li onClick={()=>{
-                        setIsOpen_2(!isOpen_2);
-                    }}>
+                    <li
+                        onClick={() => {
+                            setIsOpen_2(!isOpen_2);
+                        }}>
                         <img src={skill1} alt="skill1"/>
                         <i>{skill[i][0]}</i>
                         <h2>{skill[i][1]}</h2>
@@ -58,8 +90,7 @@ function AllHeroes() {
                         <p>{skill[i][3]}</p>
                     </li>
                 );
-            }
-            else{
+            } else {
                 skillRes.push(
                     <li>
                         <img src={skill1} alt="skill1"/>
@@ -74,6 +105,20 @@ function AllHeroes() {
         return skillRes;
     }
 
+    async function setStat() {
+        console.log('calling');
+        if (stat === "무각 60") {
+            await setStatInfo(stat[0]);
+            console.log(statInfo);
+        } else if (stat === "1각 60") {
+            await setStatInfo(stat[1]);
+            console.log(statInfo);
+        } else {
+            await setStatInfo(stat[2]);
+            console.log(statInfo);
+        }
+    }
+
     return (
         <div id="BackgroundFrame">
             <div id="mainLogo">
@@ -85,8 +130,12 @@ function AllHeroes() {
                 </div>
                 <div id="heroInfo">
                     <div id="statSelect">
-                        <select name="statSelect"
-                        onChange={(e)=>handleChange(e)}>
+                        <select
+                            name="statSelect"
+                            onChange={(e) => {
+                                handleChange(e);
+                                setStat();
+                            }}>
                             <option value="0to60">무각 60</option>
                             <option value="1to60">1각 60</option>
                             <option value="2to60">2각 60</option>
@@ -102,44 +151,7 @@ function AllHeroes() {
                     </div>
                     <p>1,2차 계약</p>
                     <p>★★★★★</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>계수명</th>
-                                <th>계수</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>체력</td>
-                                <td>13,134</td>
-                            </tr>
-                            <tr>
-                                <td>공격력</td>
-                                <td>1,217</td>
-                            </tr>
-                            <tr>
-                                <td>방어력</td>
-                                <td>899</td>
-                            </tr>
-                            <tr>
-                                <td>치명타 확률</td>
-                                <td>20%</td>
-                            </tr>
-                            <tr>
-                                <td>치명타 피해</td>
-                                <td>60%</td>
-                            </tr>
-                            <tr>
-                                <td>효과 적중</td>
-                                <td>30%</td>
-                            </tr>
-                            <tr>
-                                <td>효과 저항</td>
-                                <td>35%</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <AboutStat/>
                 </div>
             </div>
             <div id="about">
