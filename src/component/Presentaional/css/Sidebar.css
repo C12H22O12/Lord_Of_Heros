@@ -1,0 +1,44 @@
+*{
+    background-color: none;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    color: white;
+    padding: 50px;
+    text-align: right;
+    z-index: 10;
+}
+
+.sidebar>img{
+    width:100px;
+    padding:0;
+    margin:0;
+}
+
+.barItem {
+    list-style: none;
+    display: block;
+}
+
+.Item {
+    display: block;
+    width: 100px;
+    margin-block: 50px;
+}
+
+.Item > *{
+    font-family: 'Eulyoo1945-SemiBold';
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a :hover {
+    cursor: pointer;
+    font-size: 30px;
+}

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
@@ -14,6 +14,7 @@ import hero_img from "../img/gif/라이레이 무각.gif"
 import "./css/AboutHero.css"
 import AboutSkill1 from "./AboutSkill.js"
 import AboutStat from "./AboutStat.js"
+import Sidebar from "./Sidebar.js"
 
 function AllHeroes() {
     const [isOpen_2, setIsOpen_2] = useState(false);
@@ -128,6 +129,7 @@ function AllHeroes() {
 
     return (
         <div id="BackgroundFrame">
+            <Sidebar />
             <div id="mainLogo">
                 <img src={LOGO} alt="mainLogo"/>
             </div>
@@ -173,7 +175,7 @@ function AllHeroes() {
                         {skillList()}
                     </ul>
                 </div>
-                <h1>인게임 대사</h1>
+                <h1 id="talk">인게임 대사</h1>
                 <div className="heroAct">
                     <img src={hero_img} alt="meeting"/>
                     <h2>영입 시</h2>

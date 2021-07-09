@@ -1,9 +1,6 @@
 import React from "react";
-import skill2_gif from "../img/gif/라이레이 2스.gif"
 
 const AboutStat = ({stat}) => {
-    console.log(stat);
-
     return (
         <table>
             <thead>
