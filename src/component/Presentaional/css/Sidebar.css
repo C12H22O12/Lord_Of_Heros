@@ -1,4 +1,4 @@
-*{
+* {
     background-color: none;
 }
 
@@ -6,15 +6,44 @@
     position: fixed;
     right: 0;
     color: white;
-    padding: 50px;
-    text-align: right;
+    padding: 20px;
+    text-align: center;
     z-index: 10;
 }
 
-.sidebar>img{
-    width:100px;
-    padding:0;
-    margin:0;
+#mu {
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+#mu:hover {
+    transform: translateY(-3px);
+}
+
+#mu{
+    margin-right: 5px;
+}
+
+.animate-like {
+    animation-name: likeAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.65s;
+}
+
+@keyframes likeAnimation {
+    0% {
+        transform: scale(30);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .barItem {
@@ -24,21 +53,30 @@
 
 .Item {
     display: block;
-    width: 100px;
+    width: 200px;
     margin-block: 50px;
 }
 
-.Item > *{
+.Item > * {
     font-family: 'Eulyoo1945-SemiBold';
     font-size: 20px;
 }
 
-a{
+a {
+    color: #fff;
+    background: transparent;
+    letter-spacing: 0.2em;
+    border-radius: 0;
+    transition: all 0.7s ease-out;
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
     text-decoration: none;
-    color:white;
-}
-
-a :hover {
-    cursor: pointer;
-    font-size: 30px;
-}
+    border: none;
+  }
+  
+a:hover {
+    color: #fff;
+    background-position: 99% 50%;
+  }
+  
