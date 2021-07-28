@@ -109,9 +109,11 @@ function AllHeroes() {
         return skillRes;
     }
 
+    // selection에서 선택 시 스킬 계수가 변하도록 하는 함수
     function handleChange(e) {
         let value = 0;
 
+        //각각 값을 판단
         if (e.target.value === "0to60"){
             value=0;
         } else if (e.target.value === "1to60"){
@@ -120,6 +122,7 @@ function AllHeroes() {
             value=2;
         }
 
+        //forEach를 이용하여 배열의 값을 차례대로 삽입
         stat.forEach(async (att) => {
           if(att === stat[value]){
             await setStatInfo(att)

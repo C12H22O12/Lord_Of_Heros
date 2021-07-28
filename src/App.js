@@ -1,10 +1,13 @@
 import './App.css';
-import Heroes from './component/Presentaional/AboutHero'
+import All from './component/Presentaional/AllHeroes'
+import About from './component/Presentaional/AboutHero'
+import {Route} from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <Heroes></Heroes>
+      <Route path="/" component={All} exact/>
+      <Route path="/Hero" component={About}/>
     </div>
   );
 }
