@@ -4,21 +4,14 @@ import Hero from "../img/Heroes/LAIREI.png"
 import Job from "../img/jobIcon/워리어.png"
 import LOGO from "../img/메인로고.png"
 import type from "../img/typeIcon/불속성.png"
-import skill1 from "../img/skillIcon/skill/용염무.png"
-import skill2 from "../img/skillIcon/skill/옥염선.png"
-import skill3 from "../img/skillIcon/skill/열풍천도.png"
-import passive1 from "../img/skillIcon/passive/공격력 증가.png"
-import passive2 from "../img/skillIcon/passive/풀속에 피해량 증가.png"
 import hero_img from "../img/gif/라이레이 무각.gif"
 
 import "./css/AboutHero.css"
-import AboutSkill1 from "./AboutSkill.js"
 import AboutStat from "./AboutStat.js"
 import Sidebar from "./Sidebar.js"
+import {stat, skillList} from "../Container/AboutHeroFunc"
 
 function AllHeroes() {
-    const [isOpen_2, setIsOpen_2] = useState(false);
-    const [isOpen_3, setIsOpen_3] = useState(false);
     const [statInfo, setStatInfo] = useState(
         [
             10401,
@@ -29,85 +22,6 @@ function AllHeroes() {
             "35%",
             "25%"
         ]);
-
-    const skill = [
-        [
-            "1스", "용염무", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
-        ],
-        [
-            "2스", "옥염선", "버스트게이지 156 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
-        ],
-        [
-            "3스", "열풍천도", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다", isOpen_2
-        ],
-        [
-            "패시브", "용족의 위압감", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
-        ],
-        [
-            "패시브", "무예의 달인", "버스트게이지 108 획득", " 선택한 적을 공격하고, 70% 확률로 1턴 간 대상의 [방어력]을 감소시킨다"
-        ]
-    ]
-
-    const stat = [
-        [
-            11421,
-            1059,
-            782,
-            "10%",
-            "50%",
-            "10%",
-            "25%"
-        ],
-        [
-            11992,
-            1112,
-            821,
-            "15%",
-            "55%",
-            "20%",
-            "30%"
-        ],
-        [
-            10401,
-            1114,
-            1049,
-            "20%",
-            "30%",
-            "35%",
-            "25%"
-        ]
-    ];
-
-    const skillList = () => {
-        const skillRes = [];
-        for (let i = 0; i < skill.length; i++) {
-            if (i < 2) {
-                skillRes.push(
-                    <li
-                        onClick={() => {
-                            setIsOpen_2(!isOpen_2);
-                        }}>
-                        <img src={skill1} alt="skill1"/>
-                        <i>{skill[i][0]}</i>
-                        <h2>{skill[i][1]}</h2>
-                        <i>{skill[i][2]}</i>
-                        <p>{skill[i][3]}</p>
-                    </li>
-                );
-            } else {
-                skillRes.push(
-                    <li>
-                        <img src={skill1} alt="skill1"/>
-                        <i>{skill[i][0]}</i>
-                        <h2>{skill[i][1]}</h2>
-                        <i>{skill[i][2]}</i>
-                        <p>{skill[i][3]}</p>
-                    </li>
-                );
-            }
-        }
-        return skillRes;
-    }
 
     // selection에서 선택 시 스킬 계수가 변하도록 하는 함수
     function handleChange(e) {
