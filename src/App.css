@@ -21,4 +21,67 @@
 
 *{
     font-family: 'IBMPlexSansKR-Regular';
+    color: white;
+}
+
+.Title{
+    font-family: 'Eulyoo1945-SemiBold';
+    font-size:1.6rem;
+    margin : 0.8rem 0;
+    text-align: left;
+}
+
+/*Header*/
+#Header {
+    text-align: right;
+    margin: 1rem 0;
+}
+
+.HeaderItem{
+    color: #fff;
+    margin : 2rem 1rem;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.7s ease-out;
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    border: none;
+  }
+  
+.HeaderItem:hover {
+    color: #fff;
+    background-position: 99% 50%;
+}
+
+/*Main Body*/
+.container{
+    margin : 0 2rem;
+    padding: 1.5rem 2rem;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/*Footer*/
+#Footer{
+    position: relative;
+    margin : 3rem 2rem;
+    height: 2rem;
+}
+
+/*All Heroes*/
+#wholeFrame{
+    position: relative;
+    z-index: -1;
+    margin:0;
+    padding:28% 0 5% 0;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    background-image: url(./asset/AllHero.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
 }

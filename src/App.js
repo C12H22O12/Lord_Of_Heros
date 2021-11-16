@@ -1,13 +1,19 @@
 import './App.css';
-import All from './component/Presentaional/AllHeroes'
-import About from './component/Presentaional/AboutHero'
+import All from './compo_be/Presentaional/AllHeroes'
+import About from './compo_be/Presentaional/AboutHero'
 import {Route} from 'react-router-dom'
+import Header from './layout/Header';
+import Footer from './layout/Footer';
+import Home from './page/Home';
 
 function App() {
   return (
     <div>
-      <Route path="/" component={All} exact/>
-      <Route path="/Hero" component={About}/>
+      <Header />
+      <main>
+      <Home />
+      </main>
+      <Footer />
     </div>
   );
 }
