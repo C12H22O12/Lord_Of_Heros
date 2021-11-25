@@ -86,4 +86,32 @@
     text-align: center;
 }
 
-select{background-color: black;}
+/*countries*/
+.country {
+  display: inline-block;
+  margin:10px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.same-Continent{
+  display: inline-block;
+  margin:12px 0 13px 0;
+  width: 20px;
+  height: 2px;
+  opacity: 70%;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.diff-Continent{
+  display: inline-block;
+  margin:12px 0 13px 0;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  opacity: 30%;
+  border-radius: 30px;
+}
