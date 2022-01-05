@@ -73,9 +73,6 @@
 
 /*All Heroes*/
 #wholeFrame{
-    position: relative;
-    z-index: -1;
-    margin:0;
     padding:28% 0 5% 0;
     width: 100%;
     height: auto;
@@ -114,4 +111,33 @@
   background-color: white;
   opacity: 30%;
   border-radius: 30px;
+}
+
+select{
+    background-color: #000000;
+    padding:1% 1%;
+    margin : 1%;
+    width: 7%;
+    text-align: center;
+}
+
+.con_Body > div{
+    width: 100%;
+    padding: 1rem 0 3rem 0;
+    position: relative;
+}
+
+.Subtitle{
+    text-align: left;
+}
+
+.Subtitle>*{
+    position: absolute;
+    display: inline;
+    font-size: 1.3rem;
+}
+
+.enTitle{
+    padding : 0.8rem 0 0 2rem;
+    opacity: 0.4;
 }
