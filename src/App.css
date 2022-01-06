@@ -57,11 +57,17 @@
 
 /*Main Body*/
 .container{
-    margin : 0 2rem;
-    padding: 1.5rem 2rem;
+    margin : 0 6rem;
+    padding: 2.5rem 2rem;
     background-color: black;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+}
+
+.container>*{
+    width : 90%;
+    margin : 3% 5% 0 5%;
 }
 
 /*Footer*/
@@ -113,6 +119,7 @@
   border-radius: 30px;
 }
 
+/* Filter */
 select{
     background-color: #000000;
     padding:1% 1%;
@@ -121,12 +128,15 @@ select{
     text-align: center;
 }
 
+/* Nation BOdy */
+
 .con_Body > div{
     width: 100%;
     padding: 1rem 0 3rem 0;
     position: relative;
 }
 
+/* SubTitle */
 .Subtitle{
     text-align: left;
 }
@@ -140,4 +150,27 @@ select{
 .enTitle{
     padding : 0.8rem 0 0 2rem;
     opacity: 0.4;
+}
+
+/* Heroes */
+.Heroes{
+    padding: 6% 0 0 0;
+    width : 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Hero{
+    width: 15%;
+    height: 25rem;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    cursor: pointer;
+}
+
+.Hero>*{
+    border : white 1px solid;
+    padding : 2% 0;
 }
