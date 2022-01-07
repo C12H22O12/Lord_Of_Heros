@@ -132,7 +132,7 @@ select{
 
 .con_Body > div{
     width: 100%;
-    padding: 1rem 0 3rem 0;
+    padding: 1rem 0 0 0;
     position: relative;
 }
 
@@ -156,14 +156,13 @@ select{
 .Heroes{
     padding: 6% 0 0 0;
     width : 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
 }
 
 .Hero{
-    width: 15%;
+    width: 100%;
     height: 25rem;
     display: grid;
     grid-template-rows: 1fr 5fr 1fr 1fr;
