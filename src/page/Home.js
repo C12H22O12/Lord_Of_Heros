@@ -14,7 +14,8 @@ function Home() {
                     <Filter />
                 </div>
                 <div className="con_Body">
-                    <Nation />
+                    <Nation count={7}/>
+                    <Nation count={3}/>
                 </div>
             </div>
         </div>
